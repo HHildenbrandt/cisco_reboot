@@ -27,7 +27,7 @@ def main(argv):
         print('cisco-reboot.py [--hot] [--headless]')
         sys.exit(2)
 
-    hot, headless = False, False    
+    hot, headless = False, False
     for opt, arg in opts:
         if opt == "--hot":
             hot = True
@@ -38,9 +38,8 @@ def main(argv):
     options.headless = headless
     if headless:
         options.add_argument('--disable-gpu')
-        
+
     driver = webdriver.Firefox(options=options)
-        
     driver.get(url + "login_zig.asp")
     driver.set_window_size(1024, 720)
 
