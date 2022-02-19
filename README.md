@@ -23,4 +23,5 @@ sudo mv geckodriver /usr/bin/
 
 pip3 install PyOpenSSL
 pip3 install selenium
+pip3 install --upgrade requests
 ```
