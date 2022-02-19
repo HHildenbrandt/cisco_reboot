@@ -1,9 +1,15 @@
 # cisco_reboot
 
 ## dependencies
+
 ```bash
 # headless firefox
+```bash
 sudo apt install xvfb
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt update
+sudo apt install firefox
+```
 
 # selenium webdriver firefox
 wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux32.tar.gz
