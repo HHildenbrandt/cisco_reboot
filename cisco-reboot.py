@@ -36,6 +36,9 @@ def main(argv):
 
     options = Options()
     options.headless = headless
+    if headless:
+        options.add_argument('--disable-gpu')
+        
     driver = webdriver.Firefox(options=options)
         
     driver.get(url + "login_zig.asp")
