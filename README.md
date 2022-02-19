@@ -6,9 +6,14 @@
 # headless firefox
 ```bash
 sudo apt install xvfb
+sudo apt install software-properties-common
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt update
 sudo apt install firefox
+
+# or?
+sudo apt install --no-install-recommends --no-install-suggests python3-selenium
+sudo apt install --no-install-recommends --no-install-suggests xvfb python3-xvfbwrapper libgtk-3-0 libdbus-glib-1-2
 ```
 
 # selenium webdriver firefox
