@@ -59,7 +59,6 @@ def main(argv):
         alert.dismiss()
         print("Restart device dismissed. Use --hot")
     driver.quit()
-    print(hot, headless)
 
 if __name__ == "__main__":
    main(sys.argv[1:])
