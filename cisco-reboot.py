@@ -3,6 +3,7 @@
 # Selenium script to restart my Ziggo CISCO modem
 # Hanno 2022
 
+import os
 import sys
 import getopt
 from selenium import webdriver
@@ -17,8 +18,8 @@ from selenium.webdriver.firefox.options import Options
 
 def main(argv):
     url = " http://192.168.178.1/"
-    name = "hanno"
-    passw = "TRfrakt01CISC"
+    name = os.environ.get("ZiggoUser")
+    passw = os.environ.get("ZiggoPassw")
     path = r"/usr/bin/firefox"
 
     try:
