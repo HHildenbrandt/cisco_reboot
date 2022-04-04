@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Selenium script to restart CISCO modem
+# Selenium script to restart my Ziggo CISCO modem
 # Hanno 2022
 
 import sys

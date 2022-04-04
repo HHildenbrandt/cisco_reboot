@@ -25,3 +25,13 @@ pip3 install PyOpenSSL
 pip3 install selenium
 pip3 install --upgrade requests
 ```
+
+# setup
+
+Add the username and password for the modem in `.bash.rc`
+
+```bash
+# .bashrc
+ZiggoUser="user name"
+ZiggoPasw="password"
+```
