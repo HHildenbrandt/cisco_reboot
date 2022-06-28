@@ -12,11 +12,13 @@ sudo apt update
 sudo apt install firefox
 
 # or?
+```
 sudo apt install --no-install-recommends --no-install-suggests python3-selenium
 sudo apt install --no-install-recommends --no-install-suggests xvfb python3-xvfbwrapper libgtk-3-0 libdbus-glib-1-2
 ```
 
 # selenium webdriver firefox
+```
 wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux32.tar.gz
 tar -x geckodriver -zf geckodriver-v0.30.0-linux32.tar.gz
 sudo mv geckodriver /usr/local/bin/
@@ -38,13 +40,10 @@ export ZiggoUser="user"
 export ZiggoPassw="password"
 export PATH=/usr/local/bin:$PATH
 /usr/bin/python3 /home/hanno/cisco_reboot/cisco-reboot.py --headless --hot
-
 ```
-
 
 ## Cron
-
 ```
-8 20 * * * /usr/bin/bash -c /home/hanno/cisco_reboot/cisco-reboot.sh
+0 5 * * * /usr/bin/bash -c /home/hanno/cisco_reboot/cisco-reboot.sh
 ```
 
