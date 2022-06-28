@@ -19,7 +19,7 @@ sudo apt install --no-install-recommends --no-install-suggests xvfb python3-xvfb
 # selenium webdriver firefox
 wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux32.tar.gz
 tar -x geckodriver -zf geckodriver-v0.30.0-linux32.tar.gz
-sudo mv geckodriver /usr/bin/
+sudo mv geckodriver /usr/local/bin/
 
 pip3 install PyOpenSSL
 pip3 install selenium
@@ -28,17 +28,23 @@ pip3 install --upgrade requests
 
 # setup
 
-Add the username and password for the modem in `.bash.rc`
+## Create a bash script `cisco-reboot.sh'
 
 ```bash
-# .bashrc
-ZiggoUser="user name"
-ZiggoPasw="password"
+!/usr/bin/bash
+
+export DISPLAY=:0
+export ZiggoUser="user"
+export ZiggoPassw="password"
+export PATH=/usr/local/bin:$PATH
+/usr/bin/python3 /home/hanno/cisco_reboot/cisco-reboot.py --headless --hot
+
 ```
 
-# Cron
+
+## Cron
 
 ```
-0 5 * * * export DISPLAY=:0 && /usr/bin/python3 /home/${USER}/cisco_reboot/cisco-reboot.py --headless --hot
+8 20 * * * /usr/bin/bash -c /home/hanno/cisco_reboot/cisco-reboot.sh
 ```
 
