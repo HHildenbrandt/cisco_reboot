@@ -35,3 +35,10 @@ Add the username and password for the modem in `.bash.rc`
 ZiggoUser="user name"
 ZiggoPasw="password"
 ```
+
+# Cron
+
+```
+0 5 * * * export DISPLAY=:0 && /usr/bin/python3 /home/${USER}/cisco_reboot/cisco-reboot.py --headless --hot
+```
+
